@@ -1,3 +1,5 @@
 {
-  
+  "MAESTRO-CONDUCTOR_BATON.description": "At the start of combat, gain [blue]{Amount}[/blue] [gold]Resonance[/gold].",
+  "MAESTRO-CONDUCTOR_BATON.flavor": "Every music begins with silence.",
+  "MAESTRO-CONDUCTOR_BATON.title": "Conductor's Baton"
 }

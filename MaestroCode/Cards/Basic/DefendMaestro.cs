@@ -1,4 +1,6 @@
 using BaseLib.Abstracts;
+using BaseLib.Utils;
+using Maestro.MaestroCode.Character;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -8,7 +10,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Maestro.MaestroCode.Cards.Basic;
 
-
+[Pool(typeof(MaestroCardPool))]
 public sealed class DefendMaestro : CustomCardModel
 {
     public DefendMaestro()
@@ -23,13 +25,7 @@ public sealed class DefendMaestro : CustomCardModel
         get => new HashSet<CardTag>() { CardTag.Defend };
     }
 
-    protected override IEnumerable<DynamicVar> CanonicalVars
-    {
-        get
-        {
-            return (IEnumerable<DynamicVar>) new BlockVar(5M, ValueProp.Move);
-        }
-    }
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(5M, ValueProp.Move)];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

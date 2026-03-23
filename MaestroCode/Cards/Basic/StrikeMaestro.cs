@@ -25,7 +25,7 @@ public sealed class StrikeMaestro: CustomCardModel
         get => new HashSet<CardTag>() { CardTag.Strike };
     }
     
-    protected override IEnumerable<DynamicVar> CanonicalVars => new DamageVar(6M, ValueProp.Move) as IEnumerable<DynamicVar>;
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(6M, ValueProp.Move)];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

@@ -2,6 +2,7 @@
 using Maestro.MaestroCode.Extensions;
 using Godot;
 using Maestro.MaestroCode.Cards.Basic;
+using Maestro.MaestroCode.Relics;
 using MegaCrit.Sts2.Core.Entities.Characters;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
@@ -26,16 +27,16 @@ public class Maestro : PlaceholderCharacterModel
         ModelDb.Card<StrikeMaestro>(),
         ModelDb.Card<StrikeMaestro>(),
         ModelDb.Card<StrikeMaestro>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>()
+        ModelDb.Card<DefendMaestro>(),
+        ModelDb.Card<DefendMaestro>(),
+        ModelDb.Card<DefendMaestro>(),
+        ModelDb.Card<DefendMaestro>(),
+        ModelDb.Card<DefendMaestro>()
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>
     [
-        ModelDb.Relic<BurningBlood>()
+        ModelDb.Relic<ConductorBaton>()
     ];
 
     public override CardPoolModel CardPool => ModelDb.CardPool<MaestroCardPool>();
