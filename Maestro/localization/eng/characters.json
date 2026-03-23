@@ -1,0 +1,16 @@
+{
+  "MAESTRO-MAESTRO.aromaPrinciple": "This is the aroma principle for the maestro",
+  "MAESTRO-MAESTRO.banter.alive.endTurnPing": "Tick tock...",
+  "MAESTRO-MAESTRO.banter.dead.endTurnPing": "...",
+  "MAESTRO-MAESTRO.cardsModifierDescription": "Maestro's cards will now appear in rewards and shops.",
+  "MAESTRO-MAESTRO.cardsModifierTitle": "Maestro's Cards",
+  "MAESTRO-MAESTRO.description": "A conductor hellbent on revenge.\nOrchestrates instruments that bends to his will.",
+  "MAESTRO-MAESTRO.eventDeathPrevention": "Must I solo everything!",
+  "MAESTRO-MAESTRO.goldMonologue": "More funding! The orchestra grows!",
+  "MAESTRO-MAESTRO.possessiveAdjective": "his",
+  "MAESTRO-MAESTRO.pronounObject": "him",
+  "MAESTRO-MAESTRO.pronounPossessive": "his",
+  "MAESTRO-MAESTRO.pronounSubject": "he",
+  "MAESTRO-MAESTRO.title": "The Maestro",
+  "MAESTRO-MAESTRO.titleObject": "The Maestro"
+}
