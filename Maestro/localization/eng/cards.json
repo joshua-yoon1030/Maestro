@@ -1,3 +1,7 @@
 {
-  
+  "MAESTRO-STRIKE_MAESTRO.description": "Deal 6 damage",
+  "MAESTRO-STRIKE_MAESTRO.title": "Strike",
+
+  "MAESTRO-DEFEND_MAESTRO.description": "Gain 5 block",
+  "MAESTRO-DEFEND_MAESTRO.title": "Defend"
 }

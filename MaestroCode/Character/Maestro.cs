@@ -1,6 +1,7 @@
 ﻿using BaseLib.Abstracts;
 using Maestro.MaestroCode.Extensions;
 using Godot;
+using Maestro.MaestroCode.Cards.Basic;
 using MegaCrit.Sts2.Core.Entities.Characters;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
@@ -20,11 +21,11 @@ public class Maestro : PlaceholderCharacterModel
 
     public override IEnumerable<CardModel> StartingDeck =>
     [
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
+        ModelDb.Card<StrikeMaestro>(),
+        ModelDb.Card<StrikeMaestro>(),
+        ModelDb.Card<StrikeMaestro>(),
+        ModelDb.Card<StrikeMaestro>(),
+        ModelDb.Card<StrikeMaestro>(),
         ModelDb.Card<DefendIronclad>(),
         ModelDb.Card<DefendIronclad>(),
         ModelDb.Card<DefendIronclad>(),
