@@ -3,5 +3,8 @@
   "MAESTRO-STRIKE_MAESTRO.title": "Strike",
 
   "MAESTRO-DEFEND_MAESTRO.description": "Gain {Block} [gold]Block[/gold].",
-  "MAESTRO-DEFEND_MAESTRO.title": "Defend"
+  "MAESTRO-DEFEND_MAESTRO.title": "Defend",
+
+  "MAESTRO-SUSTAIN.description": "Gain [blue]{Amount}[/blue] [gold]Resonance[/gold].",
+  "MAESTRO-SUSTAIN.title": "Sustain"
 }

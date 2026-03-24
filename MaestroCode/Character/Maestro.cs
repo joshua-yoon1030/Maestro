@@ -31,7 +31,7 @@ public class Maestro : PlaceholderCharacterModel
         ModelDb.Card<DefendMaestro>(),
         ModelDb.Card<DefendMaestro>(),
         ModelDb.Card<DefendMaestro>(),
-        ModelDb.Card<DefendMaestro>()
+        ModelDb.Card<Sustain>()
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>
