@@ -26,11 +26,11 @@ public class Maestro : PlaceholderCharacterModel
         ModelDb.Card<StrikeMaestro>(),
         ModelDb.Card<StrikeMaestro>(),
         ModelDb.Card<StrikeMaestro>(),
-        ModelDb.Card<StrikeMaestro>(),
         ModelDb.Card<DefendMaestro>(),
         ModelDb.Card<DefendMaestro>(),
         ModelDb.Card<DefendMaestro>(),
         ModelDb.Card<DefendMaestro>(),
+        ModelDb.Card<ConcertA>(),
         ModelDb.Card<Sustain>()
     ];
 
