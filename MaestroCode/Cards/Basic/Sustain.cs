@@ -10,6 +10,7 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
 
+#nullable enable
 namespace Maestro.MaestroCode.Cards.Basic;
 
 
@@ -39,7 +40,8 @@ public sealed class Sustain: CustomCardModel
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         Sustain card = this;
-        Resonance res = await PowerCmd.Apply<Resonance>(card.Owner.Creature, this.DynamicVars["Amount"].BaseValue, card.Owner.Creature, this);
+        Resonance res = await PowerCmd.Apply<Resonance>(card.Owner.Creature, this.DynamicVars["Amount"].BaseValue,
+            card.Owner.Creature, this);
     }
     
     

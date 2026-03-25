@@ -10,6 +10,7 @@ using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.ValueProps;
 
+#nullable enable
 namespace Maestro.MaestroCode.Cards.Basic;
 
 
@@ -30,7 +31,6 @@ public sealed class StrikeMaestro: CustomCardModel
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         StrikeMaestro card = this;
-        ArgumentNullException.ThrowIfNull((object) cardPlay.Target, "cardPlay.Target");
         AttackCommand attackCommand = await DamageCmd.Attack(card.DynamicVars.Damage.BaseValue).FromCard(card).Targeting(cardPlay.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
     }
 

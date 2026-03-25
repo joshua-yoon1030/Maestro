@@ -8,6 +8,7 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.ValueProps;
 
+#nullable enable
 namespace Maestro.MaestroCode.Cards.Basic;
 
 [Pool(typeof(MaestroCardPool))]

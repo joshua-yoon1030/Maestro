@@ -6,5 +6,8 @@
   "MAESTRO-DEFEND_MAESTRO.title": "Defend",
 
   "MAESTRO-SUSTAIN.description": "Gain [blue]{Amount}[/blue] [gold]Resonance[/gold].",
-  "MAESTRO-SUSTAIN.title": "Sustain"
+  "MAESTRO-SUSTAIN.title": "Sustain",
+
+  "MAESTRO-MISSED_ENTRANCE.description": "Deal {Damage} damage. Shuffle a [gold]Shame[/gold] into your draw pile.",
+  "MAESTRO-MISSED_ENTRANCE.title": "Missed Entrance"
 }
