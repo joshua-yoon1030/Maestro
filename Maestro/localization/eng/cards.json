@@ -12,5 +12,17 @@
   "MAESTRO-CONCERT_A.title": "Concert A",
 
   "MAESTRO-MISSED_ENTRANCE.description": "Deal {Damage} damage. Shuffle a [gold]Shame[/gold] into your draw pile.",
-  "MAESTRO-MISSED_ENTRANCE.title": "Missed Entrance"
+  "MAESTRO-MISSED_ENTRANCE.title": "Missed Entrance",
+
+  "MAESTRO-PAGE_FLIP.description": "Draw {FirstDraw} {FirstDraw:plural:card|cards}. At the start of your next turn, draw {SecondDraw} {SecondDraw:plural:card|cards}.",
+  "MAESTRO-PAGE_FLIP.title": "Page Flip",
+
+  "MAESTRO-STACCATO.description": "Gain {Block} [gold]Block[/gold]. Gain [blue]{ThornsPower}[/blue] [gold]Thorns[/gold].",
+  "MAESTRO-STACCATO.title": "Staccato",
+
+  "MAESTRO-COMMON_TIME.description": "Deal {Damage} damage to a random enemy {Repeat} times.",
+  "MAESTRO-COMMON_TIME.title": "Common Time",
+
+  "MAESTRO-PRACTICE_MAKES_PERFECT.description": "",
+  "MAESTRO-PRACTICE_MAKES_PERFECT.title": "PracticeMakesPerfect"
 }

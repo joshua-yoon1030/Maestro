@@ -1,5 +1,9 @@
 {
   "MAESTRO-RESONANCE.description": "At the end of your turn, deal X damage to all enemies and decrease this by 1.",
   "MAESTRO-RESONANCE.smartDescription": "At the end of your turn, deal [blue]{Resonance}[/blue] damage to all enemies and decrease this by [blue]{Decrease}[/blue].",
-  "MAESTRO-RESONANCE.title": "Resonance"
+  "MAESTRO-RESONANCE.title": "Resonance",
+
+  "MAESTRO-PAGE_FLIP_POWER.description": "At the start of your turn, draw 1 card.",
+  "MAESTRO-PAGE_FLIP_POWER.smartDescription": "At the start of your turn, draw {PageFlipPower} {PageFlipPower:plural:card|cards}.",
+  "MAESTRO-PAGE_FLIP_POWER.title": "Page Flip"
 }
