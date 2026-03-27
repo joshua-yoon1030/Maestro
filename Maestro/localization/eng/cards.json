@@ -23,6 +23,13 @@
   "MAESTRO-COMMON_TIME.description": "Deal {Damage} damage to a random enemy {Repeat} times.",
   "MAESTRO-COMMON_TIME.title": "Common Time",
 
-  "MAESTRO-PRACTICE_MAKES_PERFECT.description": "",
-  "MAESTRO-PRACTICE_MAKES_PERFECT.title": "PracticeMakesPerfect"
+  "MAESTRO-HESITATION.description": "Gain {Block} [gold]Block[/gold]. If this card [gold]Exhausts[/gold], gain {EtherealBlock} [gold]Block[/gold].",
+  "MAESTRO-HESITATION.title": "Hesitation",
+
+  "MAESTRO-LONG_TONES.description": "Gain [blue]{Amount}[/blue] [gold]Resonance[/gold]. This card can be upgraded an infinite number of times.",
+  "MAESTRO-LONG_TONES.title": "Long Tones {IfUpgraded:+{CurrentUpgradeLevel}|}",
+
+  "MAESTRO-PRACTICE_MAKES_PERFECT.selectionScreenPrompt": "Choose a card to play.",
+  "MAESTRO-PRACTICE_MAKES_PERFECT.description": "Choose a card in your hand. Play it {IfUpgraded:X+1|X} times.",
+  "MAESTRO-PRACTICE_MAKES_PERFECT.title": "Practice Makes Perfect"
 }
