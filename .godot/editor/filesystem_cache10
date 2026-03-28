@@ -5,7 +5,7 @@ Maestro.json::JSON::-1::1774246398::0::1::::<><><>0<>0<><>::
 ::res://bin/::1774316251
 ::res://bin/ExportRelease/::1774316251
 ::res://bin/ExportRelease/net9.0/::1774316251
-::res://bin/ExportRelease/net9.0/publish/::1774630837
+::res://bin/ExportRelease/net9.0/publish/::1774717432
 Maestro.deps.json::JSON::-1::1774572884::0::1::::<><><>0<>0<><>::
 ::res://Maestro/::1774246398
 mod_image.png::CompressedTexture2D::182150178542568400::1774246398::1774246398::1::::<><><>0<>0<>daf2192a6cfd15f0a066328499b910c0<>res://.godot/imported/mod_image.png-cac23d05bddb26f2349be398fe22f3e6.ctex::
@@ -31,9 +31,9 @@ relic_outline.png::CompressedTexture2D::8603153551207573540::1774246398::1774246
 ::res://Maestro/images/relics/big/::1774246398
 relic.png::CompressedTexture2D::4709885874801909001::1774246398::1774246398::1::::<><><>0<>0<>5ac6fcc2c0034cfc73d3053f0f2a06d2<>res://.godot/imported/relic.png-19bcb084d82436aa683bd3da3cc0c824.ctex::
 ::res://Maestro/localization/::1774246398
-::res://Maestro/localization/eng/::1774630035
+::res://Maestro/localization/eng/::1774717407
 ancients.json::JSON::-1::1774246398::0::1::::<><><>0<>0<><>::
-cards.json::JSON::-1::1774630035::0::1::::<><><>0<>0<><>::
+cards.json::JSON::-1::1774717407::0::1::::<><><>0<>0<><>::
 card_keywords.json::JSON::-1::1774246398::0::1::::<><><>0<>0<><>::
 characters.json::JSON::-1::1774314571::0::1::::<><><>0<>0<><>::
 powers.json::JSON::-1::1774502766::0::1::::<><><>0<>0<><>::
@@ -43,8 +43,8 @@ static_hover_tips.json::JSON::-1::1774246398::0::1::::<><><>0<>0<><>::
 ::res://MaestroCode/Cards/::1774538458
 ::res://MaestroCode/Cards/Basic/::1774484338
 ::res://MaestroCode/Cards/Common/::1774489505
-::res://MaestroCode/Cards/Rare/::1774573205
-::res://MaestroCode/Cards/Uncommon/::1774630791
+::res://MaestroCode/Cards/Rare/::1774631591
+::res://MaestroCode/Cards/Uncommon/::1774716533
 ::res://MaestroCode/Character/::1774484338
 ::res://MaestroCode/Extensions/::1774314571
 ::res://MaestroCode/Potions/::1774314571

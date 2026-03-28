@@ -39,7 +39,7 @@ public class Hesitation : CustomCardModel
     
     protected override void OnUpgrade()
     {
-        this.DynamicVars.Block.UpgradeValueBy(3M);
-        this.DynamicVars["EtherealBlock"].UpgradeValueBy(3M);
+        DynamicVars.Block.UpgradeValueBy(3M);
+        DynamicVars["EtherealBlock"].UpgradeValueBy(3M);
     }
 }
