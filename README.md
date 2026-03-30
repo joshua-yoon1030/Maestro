@@ -11,8 +11,8 @@
 > Trivially, this mod requires you to have Slay the Spire 2 to play. As of the early access period, it's only available on Steam.
 > 
 > This mod also requires [BaseLib](https://github.com/Alchyr/BaseLib-StS2) as a dependency. Make sure you have [BaseLib](https://github.com/Alchyr/BaseLib-StS2) downloaded before you play this mod.
-> 1. Go to the [latest release] (https://github.com/joshua-yoon1030/Maestro/releases/) of this mod and download the dll, json, and pck files.
-> 2. Navigate to your steam app folder for STS2. You can go through your file explorer, but the fastest way is to go to your steam library for STS2, then settings button -> manage -> browse local files. Click into the mods folder (if you installed Baselib correctly, this folder should already exist) and add the 3 mod files in.
+> 1. Go to the [latest release](https://github.com/joshua-yoon1030/Maestro/releases/) of this mod and download the dll, json, and pck files.
+> 2. Navigate to your steam app folder for STS2. You can go through your file explorer, but the fastest way is to go to your steam library for STS2, then settings button -> manage -> browse local files. Click into the mods folder (if you installed [BaseLib](https://github.com/Alchyr/BaseLib-StS2) correctly, this folder should already exist) and add the 3 mod files in.
 > 3. Running Slay the Spire will now prompt you if you want to turn the mods on. Once you confirm, it will trigger a reset and you can play with mods now.
 > 4. Turn mods on and off by going in game, to Settings -> General -> Modding -> Click which ones you want on or off. Requires a reset to take effect.
 >    
