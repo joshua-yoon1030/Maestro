@@ -17,6 +17,18 @@
   "MAESTRO-PAGE_FLIP.description": "Draw {FirstDraw} {FirstDraw:plural:card|cards}. At the start of your next turn, draw {SecondDraw} {SecondDraw:plural:card|cards}.",
   "MAESTRO-PAGE_FLIP.title": "Page Flip",
 
+  "MAESTRO-FINALE.description": "Deal {Damage} damage. If this kills an enemy, end your turn.",
+  "MAESTRO-FINALE.title": "Finale",
+
+  "MAESTRO-BOWING_TECHNIQUE.description": "Deal {Damage} damage. Gain {Dexterity} Dexterity this turn.",
+  "MAESTRO-BOWING_TECHNIQUE.title": "Bowing Technique",
+
+  "MAESTRO-OFFBEAT.description": "Gain {Block} [gold]Block[/gold]. If this is the second card played this turn, gain 1 energy.",
+  "MAESTRO-OFFBEAT.title": "Offbeat",
+
+  "MAESTRO-SUBITO_FORTE.description": "Deal {Damage} damage. Gain {VigorPower} Vigor.",
+  "MAESTRO-SUBITO_FORTE.title": "Subito Forte",
+
   "MAESTRO-STACCATO.description": "Gain {Block} [gold]Block[/gold]. Gain [blue]{ThornsPower}[/blue] [gold]Thorns[/gold].",
   "MAESTRO-STACCATO.title": "Staccato",
 
