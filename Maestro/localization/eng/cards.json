@@ -10,6 +10,10 @@
 
   "MAESTRO-CONCERT_A.description": "Gain {Block} [gold]Block[/gold]",
   "MAESTRO-CONCERT_A.title": "Concert A",
+  
+  
+  
+  
 
   "MAESTRO-MISSED_ENTRANCE.description": "Deal {Damage} damage. Shuffle a [gold]Shame[/gold] into your draw pile.",
   "MAESTRO-MISSED_ENTRANCE.title": "Missed Entrance",
@@ -28,6 +32,11 @@
 
   "MAESTRO-SUBITO_FORTE.description": "Deal {Damage} damage. Gain {VigorPower} Vigor.",
   "MAESTRO-SUBITO_FORTE.title": "Subito Forte",
+  
+  
+  
+  
+  
 
   "MAESTRO-STACCATO.description": "Gain {Block} [gold]Block[/gold]. Gain [blue]{ThornsPower}[/blue] [gold]Thorns[/gold].",
   "MAESTRO-STACCATO.title": "Staccato",
@@ -40,8 +49,18 @@
 
   "MAESTRO-LONG_TONES.description": "Gain [blue]{Amount}[/blue] [gold]Resonance[/gold]. This card can be upgraded an infinite number of times.",
   "MAESTRO-LONG_TONES.title": "Long Tones {IfUpgraded:+{CurrentUpgradeLevel}|AA}",
+  
+  
+  
+  
 
   "MAESTRO-PRACTICE_MAKES_PERFECT.selectionScreenPrompt": "Choose a card to play.",
   "MAESTRO-PRACTICE_MAKES_PERFECT.description": "Choose a card in your hand. Play it {IfUpgraded:X+1|X} times.",
-  "MAESTRO-PRACTICE_MAKES_PERFECT.title": "Practice Makes Perfect"
+  "MAESTRO-PRACTICE_MAKES_PERFECT.title": "Practice Makes Perfect",
+  
+  
+  
+
+  "MAESTRO-PERFORMER1.description": "Draw {Cards} cards.",
+  "MAESTRO-PERFORMER1.title": "Violinist"
 }
