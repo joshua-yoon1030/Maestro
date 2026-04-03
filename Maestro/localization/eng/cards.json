@@ -61,6 +61,12 @@
   
   
 
-  "MAESTRO-PERFORMER1.description": "Draw {Cards} cards.",
-  "MAESTRO-PERFORMER1.title": "Violinist"
+  "MAESTRO-PERFORMER1.description": "Draw {Cards:diff()} cards.",
+  "MAESTRO-PERFORMER1.title": "Violinist",
+
+  "MAESTRO-PERFORMER2.description": "Apply {VulnerablePower:diff()} [gold]Vulnerable[/gold] to all enemies.",
+  "MAESTRO-PERFORMER2.title": "Percussionist",
+
+  "MAESTRO-PERFORMER3.description": "Gain {Resonance:diff()} [gold]Resonance[/gold]",
+  "MAESTRO-PERFORMER3.title": "Trumpeter"
 }
