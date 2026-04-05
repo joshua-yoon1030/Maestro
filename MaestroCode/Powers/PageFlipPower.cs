@@ -13,25 +13,15 @@ public class PageFlipPower : CustomPowerModel
     public override PowerType Type => PowerType.Buff;
 
     public override PowerStackType StackType => PowerStackType.Counter;
-    
-    protected override IEnumerable<DynamicVar> CanonicalVars
-    {
-        get
-        {
-            return new DynamicVar[]
-            {
-                new PowerVar<PageFlipPower>(1M),
-            };
-        }
-    }
+
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<PageFlipPower>(1)];
     
     public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
     {
-        PageFlipPower pageFlipPower = this;
-        if (player != pageFlipPower.Owner.Player) return;
+        if (player != Owner.Player) return;
         
-        pageFlipPower.Flash();
-        IEnumerable<CardModel> cardModels = await CardPileCmd.Draw(choiceContext, pageFlipPower.Amount, player);
+        Flash();
+        await CardPileCmd.Draw(choiceContext, Amount, player);
         await PowerCmd.Remove<PageFlipPower>(player.Creature);
     }
 }

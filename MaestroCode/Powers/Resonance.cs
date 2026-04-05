@@ -14,27 +14,20 @@ public class Resonance : CustomPowerModel
 {
 	public override PowerType Type => PowerType.Buff;
 	public override PowerStackType StackType => PowerStackType.Counter;
-	
-	protected override IEnumerable<DynamicVar> CanonicalVars
-	{
-		get
-		{
-			return new DynamicVar[]
-			{
-				new PowerVar<Resonance>(2M),
-				new DynamicVar("Decrease", 1M),
-			};
-		}
-	}
+
+	protected override IEnumerable<DynamicVar> CanonicalVars => 
+	[
+		new PowerVar<Resonance>(Amount),
+		new DynamicVar("Decrease", 1)
+	];
 
 	public override async Task BeforeTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
 	{
-		Resonance res = this;
-		if (side != res.Owner.Side) return;
+		if (side != Owner.Side) return;
 
-		res.Flash();
-		IEnumerable<DamageResult> damageResults = await CreatureCmd.Damage(choiceContext, (IEnumerable<Creature>)res.Owner.CombatState.HittableEnemies, new DamageVar(res.Amount, ValueProp.Move), res.Owner);
+		Flash();
+		await CreatureCmd.Damage(choiceContext, Owner.CombatState.HittableEnemies, new DamageVar(Amount, ValueProp.Move), Owner);
 
-		await PowerCmd.ModifyAmount(this, -res.DynamicVars["Decrease"].BaseValue, res.Owner, null);
+		await PowerCmd.ModifyAmount(this, -DynamicVars["Decrease"].BaseValue, Owner, null);
 	}
 }
