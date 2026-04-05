@@ -12,23 +12,16 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace Maestro.MaestroCode.Cards.Uncommon;
 
 [Pool(typeof(MaestroCardPool))]
-public sealed class CommonTime : CustomCardModel
+public sealed class CommonTime() : CustomCardModel(2, CardType.Attack, CardRarity.Uncommon, TargetType.RandomEnemy)
 {
-    public CommonTime(): base(2, CardType.Attack, CardRarity.Uncommon, TargetType.RandomEnemy)
-    {
-    }
-
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(4M, ValueProp.Move), new RepeatVar(4)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(4, ValueProp.Move), new RepeatVar(4)];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        CommonTime card = this;
-        AttackCommand attackCommand = await DamageCmd.Attack(card.DynamicVars.Damage.BaseValue).WithHitCount(card.DynamicVars.Repeat.IntValue).FromCard((CardModel) card).TargetingRandomOpponents(card.CombatState).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
+        await DamageCmd.Attack(DynamicVars.Damage.BaseValue).WithHitCount(DynamicVars.Repeat.IntValue).FromCard(this).TargetingRandomOpponents(CombatState).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
     }
 
-    protected override void OnUpgrade() => this.DynamicVars.Damage.UpgradeValueBy(1M);
-
-
+    protected override void OnUpgrade() => DynamicVars.Damage.UpgradeValueBy(1);
 }
     
     

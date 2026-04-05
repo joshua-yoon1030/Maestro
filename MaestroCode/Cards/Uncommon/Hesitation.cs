@@ -12,34 +12,28 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace Maestro.MaestroCode.Cards.Uncommon;
 
 [Pool(typeof(MaestroCardPool))]
-public class Hesitation : CustomCardModel
+public class Hesitation() : CustomCardModel(2, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
 {
-    public Hesitation() : base(2, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
-    {
-    }
-    
     public override bool GainsBlock => true;
 
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Ethereal];
-    
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(9M, ValueProp.Move), new DynamicVar("EtherealBlock", 6M)];
+
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(9, ValueProp.Move), new DynamicVar("EtherealBlock", 6)];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        Hesitation hesitation = this;
-        await CreatureCmd.GainBlock(hesitation.Owner.Creature, hesitation.DynamicVars.Block, cardPlay);
+        await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, cardPlay);
     }
 
     public override async Task AfterCardExhausted(PlayerChoiceContext choiceContext, CardModel card, bool causedByEthereal)
     {
-        Hesitation hesitation = this;
-        if (card != hesitation) return;
-        await CreatureCmd.GainBlock(hesitation.Owner.Creature, new BlockVar(hesitation.DynamicVars["EtherealBlock"].BaseValue, ValueProp.Move), null);
+        if (card != this) return;
+        await CreatureCmd.GainBlock(Owner.Creature, new BlockVar(DynamicVars["EtherealBlock"].BaseValue, ValueProp.Move), null);
     }
-    
+
     protected override void OnUpgrade()
     {
-        DynamicVars.Block.UpgradeValueBy(3M);
-        DynamicVars["EtherealBlock"].UpgradeValueBy(3M);
+        DynamicVars.Block.UpgradeValueBy(3);
+        DynamicVars["EtherealBlock"].UpgradeValueBy(3);
     }
 }

@@ -14,23 +14,16 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace Maestro.MaestroCode.Cards.Common;
 
 [Pool(typeof(MaestroCardPool))]
-public class Finale : CustomCardModel
+public class Finale() : CustomCardModel(2, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
 {
-	public Finale()
-		: base(2, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
-	{
-	}
-
-	protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(17M, ValueProp.Move)];
+	protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(17, ValueProp.Move)];
 
 	protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
 	{
-		Finale card = this;
-		
-		if (!(await DamageCmd.Attack(card.DynamicVars.Damage.BaseValue).FromCard(card).Targeting(cardPlay.Target).Execute(choiceContext)).Results.Any (r => r.WasTargetKilled))
+		if (!(await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target).Execute(choiceContext)).Results.Any(r => r.WasTargetKilled))
 			return;
-		PlayerCmd.EndTurn(card.Owner, false);
+		PlayerCmd.EndTurn(Owner, false);
 	}
-	
-	protected override void OnUpgrade() =>  DynamicVars.Damage.UpgradeValueBy(5M);
+
+	protected override void OnUpgrade() => DynamicVars.Damage.UpgradeValueBy(5);
 }

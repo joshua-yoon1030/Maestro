@@ -12,25 +12,18 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace Maestro.MaestroCode.Cards.Common;
 
 [Pool(typeof(MaestroCardPool))]
-public class BowingTechnique: CustomCardModel
+public class BowingTechnique() : CustomCardModel(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
 {
-	public BowingTechnique()
-		: base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
-	{
-	}
-
-	protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(5M, ValueProp.Move), new PowerVar<DexterityPower>(1M)];
+	protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(5, ValueProp.Move), new PowerVar<DexterityPower>(1)];
 
 	protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
 	{
-		BowingTechnique card = this;
-		
-		BowingTechniquePower btPower = await PowerCmd.Apply<BowingTechniquePower>(card.Owner.Creature, card.DynamicVars.Dexterity.BaseValue, card.Owner.Creature, card);
+		await PowerCmd.Apply<BowingTechniquePower>(Owner.Creature, DynamicVars.Dexterity.BaseValue, Owner.Creature, this);
 	}
 
 	protected override void OnUpgrade()
 	{
-		DynamicVars.Damage.UpgradeValueBy(1M);
-		DynamicVars.Dexterity.UpgradeValueBy(1M);
+		DynamicVars.Damage.UpgradeValueBy(1);
+		DynamicVars.Dexterity.UpgradeValueBy(1);
 	}
 }

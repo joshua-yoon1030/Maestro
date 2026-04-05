@@ -10,20 +10,16 @@ using MegaCrit.Sts2.Core.Models;
 namespace Maestro.MaestroCode.Cards.Token;
 
 [Pool(typeof(MaestroCardPool))]
-public class Performer1 : CustomCardModel
+public class Performer1() : CustomCardModel(0, CardType.Skill, CardRarity.Token, TargetType.Self)
 {
-    public Performer1() : base(0, CardType.Skill, CardRarity.Token, TargetType.Self)
-    {
-    }
-
     protected override HashSet<CardTag> CanonicalTags => [CustomCardTags.Performer];
     protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(1)];
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        IEnumerable<CardModel> cardModels = await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.BaseValue, Owner);
+        await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.BaseValue, Owner);
     }
-    
+
     protected override void OnUpgrade() => DynamicVars.Cards.UpgradeValueBy(1);
 }

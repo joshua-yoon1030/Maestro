@@ -12,38 +12,27 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace Maestro.MaestroCode.Cards.Common;
 
 [Pool(typeof(MaestroCardPool))]
-public class Offbeat : CustomCardModel
+public class Offbeat() : CustomCardModel(2, CardType.Skill, CardRarity.Common, TargetType.Self)
 {
-	public Offbeat()
-		: base(2, CardType.Skill, CardRarity.Common, TargetType.Self)
-	{
-	}
-
 	public override bool GainsBlock => true;
-	protected override bool ShouldGlowGoldInternal => this.ShouldRefundEnergy;
+	protected override bool ShouldGlowGoldInternal => ShouldRefundEnergy;
 
-	private bool ShouldRefundEnergy
-	{
-		get
-		{
-			return CombatManager.Instance.History.CardPlaysFinished.Count(e => e.HappenedThisTurn(CombatState) && e.CardPlay.Card.Owner == Owner) == 2;
-		}
-	}
+	private bool ShouldRefundEnergy =>
+		CombatManager.Instance.History.CardPlaysFinished.Count(e => e.HappenedThisTurn(CombatState) && e.CardPlay.Card.Owner == Owner) == 2;
 
-	protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(9M, ValueProp.Move), new EnergyVar("Energy", 1)];
+	protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(9, ValueProp.Move), new EnergyVar("Energy", 1)];
 
 	protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
 	{
-		Offbeat offbeat = this;
-		Decimal num = await CreatureCmd.GainBlock(offbeat.Owner.Creature, offbeat.DynamicVars.Block, cardPlay);
+		await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, cardPlay);
 
 		if (!ShouldRefundEnergy) return;
-		
-		await PlayerCmd.GainEnergy(offbeat.DynamicVars.Energy.IntValue, offbeat.Owner);
+
+		await PlayerCmd.GainEnergy(DynamicVars.Energy.IntValue, Owner);
 	}
 
 	protected override void OnUpgrade()
 	{
-		DynamicVars.Block.UpgradeValueBy(3M);
+		DynamicVars.Block.UpgradeValueBy(3);
 	}
 }

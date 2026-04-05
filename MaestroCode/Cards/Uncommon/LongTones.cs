@@ -12,28 +12,23 @@ namespace Maestro.MaestroCode.Cards.Uncommon;
 
 
 [Pool(typeof(MaestroCardPool))]
-public sealed class LongTones : CustomCardModel
+public sealed class LongTones() : CustomCardModel(1, CardType.Skill, CardRarity.Rare, TargetType.Self)
 {
-    private Decimal upgradeAmount;
-    public LongTones() : base(1, CardType.Skill, CardRarity.Rare, TargetType.Self)
-    {
-        upgradeAmount = 2M;
-    }
+    private int upgradeAmount = 2;
 
     public override int MaxUpgradeLevel => 999;
-    
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DynamicVar("Amount", 3M), new DynamicVar("CurrentUpgradeLevel", 0M)];
+
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DynamicVar("Amount", 3), new DynamicVar("CurrentUpgradeLevel", 0)];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        LongTones card = this;
-        Resonance res = await PowerCmd.Apply<Resonance>(card.Owner.Creature, DynamicVars["Amount"].BaseValue,
-            card.Owner.Creature, card);
+        await PowerCmd.Apply<Resonance>(Owner.Creature, DynamicVars["Amount"].BaseValue, Owner.Creature, this);
     }
-    
-    protected override void OnUpgrade() {
-        DynamicVars["CurrentUpgradeLevel"].UpgradeValueBy(1M);
+
+    protected override void OnUpgrade()
+    {
+        DynamicVars["CurrentUpgradeLevel"].UpgradeValueBy(1);
         DynamicVars["Amount"].UpgradeValueBy(upgradeAmount);
-        upgradeAmount += 1M;
+        upgradeAmount += 1;
     }
 }

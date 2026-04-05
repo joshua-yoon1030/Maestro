@@ -11,38 +11,24 @@ namespace Maestro.MaestroCode.Cards.Rare;
 
 
 [Pool(typeof(MaestroCardPool))]
-public sealed class PracticeMakesPerfect : CustomCardModel
+public sealed class PracticeMakesPerfect() : CustomCardModel(-1, CardType.Skill, CardRarity.Rare, TargetType.Self)
 {
-    public PracticeMakesPerfect() : base(-1, CardType.Skill, CardRarity.Rare, TargetType.Self)
-    {
-    }
-    
     protected override bool HasEnergyCostX => true;
-    
+
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        PracticeMakesPerfect source = this;
-        await CreatureCmd.TriggerAnim(source.Owner.Creature, "Cast", source.Owner.Character.CastAnimDelay);
-        CardSelectorPrefs prefs = new CardSelectorPrefs(source.SelectionScreenPrompt, 1)
+        await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
+        CardSelectorPrefs prefs = new CardSelectorPrefs(SelectionScreenPrompt, 1)
         {
             PretendCardsCanBePlayed = true
         };
-        CardModel card = (await CardSelectCmd.FromHand(choiceContext, source.Owner, prefs, (Func<CardModel, bool>) (c => !c.Keywords.Contains(CardKeyword.Unplayable)), source)).FirstOrDefault();
-        int count = source.ResolveEnergyXValue();
-        if (source.IsUpgraded)
+        CardModel card = (await CardSelectCmd.FromHand(choiceContext, Owner, prefs, c => !c.Keywords.Contains(CardKeyword.Unplayable), this)).FirstOrDefault();
+        int count = ResolveEnergyXValue();
+        if (IsUpgraded)
             ++count;
         for (int i = 0; i < count; ++i)
         {
-            if (card.Type == CardType.Skill || card.Type == CardType.Power)
-            {
-                await CardCmd.AutoPlay(choiceContext, card, null);
-            }
-            else
-            {
-                await CardCmd.AutoPlay(choiceContext, card, null);
-            }
-            
+            await CardCmd.AutoPlay(choiceContext, card, null);
         }
-        
     }
 }

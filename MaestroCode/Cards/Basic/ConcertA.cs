@@ -12,36 +12,18 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace Maestro.MaestroCode.Cards.Basic;
 
 [Pool(typeof(MaestroCardPool))]
-public sealed class ConcertA : CustomCardModel
+public sealed class ConcertA() : CustomCardModel(0, CardType.Skill, CardRarity.Basic, TargetType.Self)
 {
-	public ConcertA()
-		: base(0, CardType.Skill, CardRarity.Basic, TargetType.Self)
-	{
-	}
-
 	public override bool GainsBlock => true;
 
-	protected override IEnumerable<DynamicVar> CanonicalVars
-	{
-		get
-		{
-			return [new BlockVar(8M, ValueProp.Move)];
-		}
-	}
+	protected override IEnumerable<DynamicVar> CanonicalVars =>  [new BlockVar(8, ValueProp.Move)];
 
-	public override IEnumerable<CardKeyword> CanonicalKeywords
-	{
-		get
-		{
-			return [CardKeyword.Innate, CardKeyword.Exhaust];
-		}
-	}
+	public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Innate, CardKeyword.Exhaust];
 
 	protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
 	{
-		ConcertA concertA = this;
-		Decimal num = await CreatureCmd.GainBlock(concertA.Owner.Creature, concertA.DynamicVars.Block, cardPlay);
+		await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, cardPlay);
 	}
 
-	protected override void OnUpgrade() => this.DynamicVars.Block.UpgradeValueBy(3M);
+	protected override void OnUpgrade() => DynamicVars.Block.UpgradeValueBy(3);
 }

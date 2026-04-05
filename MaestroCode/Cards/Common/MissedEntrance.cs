@@ -13,28 +13,17 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace Maestro.MaestroCode.Cards.Common;
 
 [Pool(typeof(MaestroCardPool))]
-public sealed class MissedEntrance: CustomCardModel
+public sealed class MissedEntrance() : CustomCardModel(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
 {
-    public MissedEntrance(): base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
-    {
-    }
-    
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(12M, ValueProp.Move)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(12, ValueProp.Move)];
 
-    protected override IEnumerable<IHoverTip> ExtraHoverTips
-    {
-        get
-        {
-            return [HoverTipFactory.FromCard<Shame>()];
-        }
-    }
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromCard<Shame>()];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        MissedEntrance card = this;
-        AttackCommand attackCommand = await DamageCmd.Attack(card.DynamicVars.Damage.BaseValue).FromCard(card).Targeting(cardPlay.Target).Execute(choiceContext);
-        CardCmd.PreviewCardPileAdd(await CardPileCmd.AddGeneratedCardToCombat(card.CombatState.CreateCard<Shame>(card.Owner), PileType.Draw, true), 2.2f);
+        await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target).Execute(choiceContext);
+        CardCmd.PreviewCardPileAdd(await CardPileCmd.AddGeneratedCardToCombat(CombatState.CreateCard<Shame>(Owner), PileType.Draw, true), 2.2f);
     }
 
-    protected override void OnUpgrade() =>  this.DynamicVars.Damage.UpgradeValueBy(5M);
+    protected override void OnUpgrade() => DynamicVars.Damage.UpgradeValueBy(5);
 }
