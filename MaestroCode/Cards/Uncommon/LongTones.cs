@@ -18,17 +18,17 @@ public sealed class LongTones() : CustomCardModel(1, CardType.Skill, CardRarity.
 
     public override int MaxUpgradeLevel => 999;
 
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DynamicVar("Amount", 3), new DynamicVar("CurrentUpgradeLevel", 0)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<Resonance>(3), new DynamicVar("CurrentUpgradeLevel", 0)];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<Resonance>(Owner.Creature, DynamicVars["Amount"].BaseValue, Owner.Creature, this);
+        await PowerCmd.Apply<Resonance>(Owner.Creature, DynamicVars["Resonance"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()
     {
         DynamicVars["CurrentUpgradeLevel"].UpgradeValueBy(1);
-        DynamicVars["Amount"].UpgradeValueBy(upgradeAmount);
+        DynamicVars["Resonance"].UpgradeValueBy(upgradeAmount);
         upgradeAmount += 1;
     }
 }

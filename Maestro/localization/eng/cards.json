@@ -48,7 +48,7 @@
   "MAESTRO-HESITATION.title": "Hesitation",
 
   "MAESTRO-LONG_TONES.description": "Gain {Resonance:diff()} [gold]Resonance[/gold]. This card can be upgraded an infinite number of times.",
-  "MAESTRO-LONG_TONES.title": "Long Tones {IfUpgraded:show:YESUPGRADE|NONUPGRADE}",
+  "MAESTRO-LONG_TONES.title": "Long Tones",
   
   
   

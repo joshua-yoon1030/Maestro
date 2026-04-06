@@ -15,7 +15,7 @@ namespace Maestro.MaestroCode.Cards.Basic;
 
 
 [Pool(typeof(MaestroCardPool))]
-public sealed class StrikeMaestro() : CustomCardModel(1, CardType.Attack, CardRarity.Basic, TargetType.AnyEnemy)
+public sealed class StrikeMaestro() : MaestroCard(1, CardType.Attack, CardRarity.Basic, TargetType.AnyEnemy)
 {
     protected override HashSet<CardTag> CanonicalTags => [CardTag.Strike];
 
