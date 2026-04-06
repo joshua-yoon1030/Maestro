@@ -12,8 +12,9 @@ using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace Maestro.MaestroCode.Cards.Token;
 
+//Performer 2: Percussionist
 [Pool(typeof(MaestroCardPool))]
-public class Performer2() : MaestroCard(0, CardType.Skill, CardRarity.Token, TargetType.Self)
+public class Performer2() : MaestroCard(0, CardType.Skill, CardRarity.Token, TargetType.AnyEnemy)
 {
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
 
