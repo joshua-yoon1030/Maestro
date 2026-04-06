@@ -13,7 +13,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace Maestro.MaestroCode.Cards.Common;
 
 [Pool(typeof(MaestroCardPool))]
-public sealed class MissedEntrance() : CustomCardModel(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
+public sealed class MissedEntrance() : MaestroCard(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(12, ValueProp.Move)];
 

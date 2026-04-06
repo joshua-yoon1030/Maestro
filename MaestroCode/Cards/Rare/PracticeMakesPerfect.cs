@@ -11,7 +11,7 @@ namespace Maestro.MaestroCode.Cards.Rare;
 
 
 [Pool(typeof(MaestroCardPool))]
-public sealed class PracticeMakesPerfect() : CustomCardModel(-1, CardType.Skill, CardRarity.Rare, TargetType.Self)
+public sealed class PracticeMakesPerfect() : MaestroCard(-1, CardType.Skill, CardRarity.Rare, TargetType.Self)
 {
     protected override bool HasEnergyCostX => true;
 

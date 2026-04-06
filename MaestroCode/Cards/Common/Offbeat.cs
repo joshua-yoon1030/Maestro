@@ -12,7 +12,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace Maestro.MaestroCode.Cards.Common;
 
 [Pool(typeof(MaestroCardPool))]
-public class Offbeat() : CustomCardModel(2, CardType.Skill, CardRarity.Common, TargetType.Self)
+public class Offbeat() : MaestroCard(2, CardType.Skill, CardRarity.Common, TargetType.Self)
 {
 	public override bool GainsBlock => true;
 	protected override bool ShouldGlowGoldInternal => ShouldRefundEnergy;

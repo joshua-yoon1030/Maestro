@@ -13,7 +13,7 @@ using MegaCrit.Sts2.Core.Models.Powers;
 namespace Maestro.MaestroCode.Cards.Token;
 
 [Pool(typeof(MaestroCardPool))]
-public class Performer2() : CustomCardModel(0, CardType.Skill, CardRarity.Token, TargetType.Self)
+public class Performer2() : MaestroCard(0, CardType.Skill, CardRarity.Token, TargetType.Self)
 {
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
 

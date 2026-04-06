@@ -12,7 +12,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace Maestro.MaestroCode.Cards.Common;
 
 [Pool(typeof(MaestroCardPool))]
-public class BowingTechnique() : CustomCardModel(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
+public class BowingTechnique() : MaestroCard(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
 {
 	protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(5, ValueProp.Move), new PowerVar<DexterityPower>(1)];
 

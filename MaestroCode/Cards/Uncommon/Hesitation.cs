@@ -12,7 +12,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace Maestro.MaestroCode.Cards.Uncommon;
 
 [Pool(typeof(MaestroCardPool))]
-public class Hesitation() : CustomCardModel(2, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
+public class Hesitation() : MaestroCard(2, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
 {
     public override bool GainsBlock => true;
 

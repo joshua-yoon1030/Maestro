@@ -15,7 +15,7 @@ namespace Maestro.MaestroCode.Cards.Basic;
 
 
 [Pool(typeof(MaestroCardPool))]
-public sealed class Sustain() : CustomCardModel(1, CardType.Skill, CardRarity.Basic, TargetType.Self)
+public sealed class Sustain() : MaestroCard(1, CardType.Skill, CardRarity.Basic, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<Resonance>(2)];
 

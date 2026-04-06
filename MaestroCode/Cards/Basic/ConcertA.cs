@@ -12,7 +12,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace Maestro.MaestroCode.Cards.Basic;
 
 [Pool(typeof(MaestroCardPool))]
-public sealed class ConcertA() : CustomCardModel(0, CardType.Skill, CardRarity.Basic, TargetType.Self)
+public sealed class ConcertA() : MaestroCard(0, CardType.Skill, CardRarity.Basic, TargetType.Self)
 {
 	public override bool GainsBlock => true;
 

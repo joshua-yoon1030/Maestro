@@ -10,7 +10,7 @@ using MegaCrit.Sts2.Core.Models;
 namespace Maestro.MaestroCode.Cards.Token;
 
 [Pool(typeof(MaestroCardPool))]
-public class Performer1() : CustomCardModel(0, CardType.Skill, CardRarity.Token, TargetType.Self)
+public class Performer1() : MaestroCard(0, CardType.Skill, CardRarity.Token, TargetType.Self)
 {
     protected override HashSet<CardTag> CanonicalTags => [CustomCardTags.Performer];
     protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(1)];

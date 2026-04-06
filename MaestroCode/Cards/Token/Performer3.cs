@@ -11,7 +11,7 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 namespace Maestro.MaestroCode.Cards.Token;
 
 [Pool(typeof(MaestroCardPool))]
-public class Performer3() : CustomCardModel(0, CardType.Skill, CardRarity.Token, TargetType.Self)
+public class Performer3() : MaestroCard(0, CardType.Skill, CardRarity.Token, TargetType.Self)
 {
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
 

@@ -13,7 +13,7 @@ namespace Maestro.MaestroCode.Cards.Uncommon;
 
 
 [Pool(typeof(MaestroCardPool))]
-public sealed class Staccato() : CustomCardModel(2, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
+public sealed class Staccato() : MaestroCard(2, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
 {
     public override bool GainsBlock => true;
 

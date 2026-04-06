@@ -12,7 +12,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace Maestro.MaestroCode.Cards.Common;
 
 [Pool(typeof(MaestroCardPool))]
-public class PageFlip() : CustomCardModel(1, CardType.Skill, CardRarity.Common, TargetType.Self)
+public class PageFlip() : MaestroCard(1, CardType.Skill, CardRarity.Common, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar("FirstDraw", 1), new CardsVar("SecondDraw", 1)];
 

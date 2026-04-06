@@ -12,7 +12,7 @@ namespace Maestro.MaestroCode.Cards.Uncommon;
 
 
 [Pool(typeof(MaestroCardPool))]
-public sealed class LongTones() : CustomCardModel(1, CardType.Skill, CardRarity.Rare, TargetType.Self)
+public sealed class LongTones() : MaestroCard(1, CardType.Skill, CardRarity.Rare, TargetType.Self)
 {
     private int upgradeAmount = 2;
 

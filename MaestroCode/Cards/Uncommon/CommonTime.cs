@@ -12,7 +12,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace Maestro.MaestroCode.Cards.Uncommon;
 
 [Pool(typeof(MaestroCardPool))]
-public sealed class CommonTime() : CustomCardModel(2, CardType.Attack, CardRarity.Uncommon, TargetType.RandomEnemy)
+public sealed class CommonTime() : MaestroCard(2, CardType.Attack, CardRarity.Uncommon, TargetType.RandomEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(4, ValueProp.Move), new RepeatVar(4)];
 

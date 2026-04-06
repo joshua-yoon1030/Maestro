@@ -14,7 +14,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace Maestro.MaestroCode.Cards.Common;
 
 [Pool(typeof(MaestroCardPool))]
-public class SubitoForte() : CustomCardModel(2, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
+public class SubitoForte() : MaestroCard(2, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
 {
 	protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(3, ValueProp.Move), new PowerVar<VigorPower>(3)];
 
