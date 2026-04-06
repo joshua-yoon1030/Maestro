@@ -14,7 +14,7 @@ namespace Maestro.MaestroCode.Cards.Token;
 
 //Performer 2: Percussionist
 [Pool(typeof(MaestroCardPool))]
-public class Performer2() : MaestroCard(0, CardType.Skill, CardRarity.Token, TargetType.AnyEnemy)
+public class Performer2() : MaestroCard(0, CardType.Skill, CardRarity.Token, TargetType.AllEnemies)
 {
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
 

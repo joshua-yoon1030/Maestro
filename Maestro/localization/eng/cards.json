@@ -33,12 +33,15 @@
   "MAESTRO-SUBITO_FORTE.description": "Deal {Damage:diff()} damage. Gain {VigorPower:diff()} Vigor.",
   "MAESTRO-SUBITO_FORTE.title": "Subito Forte",
   
+  "MAESTRO-DELEGATE.description": "Deal {Damage:diff()} damage. Add a [gold]Performer[/gold] to your hand.",
+  "MAESTRO-DELEGATE.title": "Delegate",
+  
   
   
   
   
 
-  "MAESTRO-STACCATO.description": "Gain {Block:diff()} [gold]Block[/gold]. Gain {ThornsPower:diff()}f  [gold]Thorns[/gold].",
+  "MAESTRO-STACCATO.description": "Gain {Block:diff()} [gold]Block[/gold]. Gain {ThornsPower:diff()}  [gold]Thorns[/gold].",
   "MAESTRO-STACCATO.title": "Staccato",
 
   "MAESTRO-COMMON_TIME.description": "Deal {Damage:diff()} damage to a random enemy {Repeat} times.",
@@ -49,6 +52,9 @@
 
   "MAESTRO-LONG_TONES.description": "Gain {Resonance:diff()} [gold]Resonance[/gold]. This card can be upgraded an infinite number of times.",
   "MAESTRO-LONG_TONES.title": "Long Tones",
+
+  "MAESTRO-FERMATA.description": "Retain your hand.",
+  "MAESTRO-FERMATA.title": "Fermata",
   
   
   

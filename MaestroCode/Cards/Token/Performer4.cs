@@ -13,7 +13,7 @@ namespace Maestro.MaestroCode.Cards.Token;
 //Performer 4: Flautist
 
 [Pool(typeof(MaestroCardPool))]
-public class Performer4() : MaestroCard(0, CardType.Skill, CardRarity.Token, TargetType.Self)
+public class Performer4() : MaestroCard(0, CardType.Skill, CardRarity.Token, TargetType.AnyEnemy)
 {
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
 
