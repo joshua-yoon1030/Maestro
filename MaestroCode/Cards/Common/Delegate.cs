@@ -25,7 +25,6 @@ public class Delegate() : MaestroCard(1, CardType.Attack, CardRarity.Common, Tar
 		CardModel card = CardFactory.GetDistinctForCombat(Owner, Owner.Character.CardPool.GetUnlockedCards(Owner.UnlockState, Owner.RunState.CardMultiplayerConstraint).Where( c => c.Tags.Contains(CustomCardTags.Performer)), 1, Owner.RunState.Rng.CombatCardGeneration).FirstOrDefault();
 		if (card == null)
 			return;
-		card.SetToFreeThisTurn();
 		await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, true);
 	}
 }

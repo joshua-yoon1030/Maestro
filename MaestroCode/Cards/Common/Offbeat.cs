@@ -15,21 +15,34 @@ namespace Maestro.MaestroCode.Cards.Common;
 public class Offbeat() : MaestroCard(2, CardType.Skill, CardRarity.Common, TargetType.Self)
 {
 	public override bool GainsBlock => true;
-	protected override bool ShouldGlowGoldInternal => ShouldRefundEnergy;
+	protected override bool ShouldGlowGoldInternal => CombatManager.Instance.History.CardPlaysFinished.Count(e => e.HappenedThisTurn(CombatState) && e.CardPlay.Card.Owner == Owner) == 2;
 
-	private bool ShouldRefundEnergy =>
-		CombatManager.Instance.History.CardPlaysFinished.Count(e => e.HappenedThisTurn(CombatState) && e.CardPlay.Card.Owner == Owner) == 2;
-
-	protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(9, ValueProp.Move), new EnergyVar("Energy", 1)];
+	protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(9, ValueProp.Move)];
 
 	protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
 	{
 		await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, cardPlay);
-
-		if (!ShouldRefundEnergy) return;
-
-		await PlayerCmd.GainEnergy(DynamicVars.Energy.IntValue, Owner);
 	}
+	
+	public override Task BeforeCardPlayed(CardPlay cardPlay)
+	{
+		if (cardPlay.Card.Owner != Owner)
+			return Task.CompletedTask;
+		if (CombatManager.Instance.History.CardPlaysFinished.Count(e =>
+			    e.HappenedThisTurn(CombatState) && e.CardPlay.Card.Owner == Owner) == 2)
+		{
+			UpdateCost(-1);
+		}
+		else if (CombatManager.Instance.History.CardPlaysFinished.Count(e =>
+			         e.HappenedThisTurn(CombatState) && e.CardPlay.Card.Owner == Owner) == 3)
+		{
+			UpdateCost(1);
+		}
+        
+		return Task.CompletedTask;
+	}
+    
+	private void UpdateCost(int amount) => EnergyCost.AddThisTurn(amount);
 
 	protected override void OnUpgrade()
 	{

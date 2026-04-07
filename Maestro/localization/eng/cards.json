@@ -27,7 +27,7 @@
   "MAESTRO-BOWING_TECHNIQUE.description": "Deal {Damage:diff()} damage. Gain {DexterityPower:diff()} Dexterity this turn.",
   "MAESTRO-BOWING_TECHNIQUE.title": "Bowing Technique",
 
-  "MAESTRO-OFFBEAT.description": "Gain {Block:diff()} [gold]Block[/gold]. If this is the second card played this turn, gain 1 energy.",
+  "MAESTRO-OFFBEAT.description": "Gain {Block:diff()} [gold]Block[/gold]. If this is the second card played this turn, this costs 1 less.",
   "MAESTRO-OFFBEAT.title": "Offbeat",
 
   "MAESTRO-SUBITO_FORTE.description": "Deal {Damage:diff()} damage. Gain {VigorPower:diff()} Vigor.",
@@ -53,8 +53,17 @@
   "MAESTRO-LONG_TONES.description": "Gain {Resonance:diff()} [gold]Resonance[/gold]. This card can be upgraded an infinite number of times.",
   "MAESTRO-LONG_TONES.title": "Long Tones",
 
-  "MAESTRO-FERMATA.description": "Retain your hand.",
+  "MAESTRO-FERMATA.description": "[gold]Retain[/gold] your hand.",
   "MAESTRO-FERMATA.title": "Fermata",
+
+  "MAESTRO-THIRD_MOVEMENT.description": "Deal {Damage} damage. If this is the third card played this turn, this costs 1 less.",
+  "MAESTRO-THIRD_MOVEMENT.title": "Third Movement",
+
+  "MAESTRO-SECTIONAL.description": "Add {Amount} of the same [gold]Performer[/gold] to your hand.",
+  "MAESTRO-SECTIONAL.title": "Sectional",
+
+  "MAESTRO-JAM_SESSION.description": "At the start of every turn, add 1 Performer to your hand.",
+  "MAESTRO-JAM_SESSION.title": "Jam Session",
   
   
   
