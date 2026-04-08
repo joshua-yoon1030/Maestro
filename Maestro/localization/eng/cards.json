@@ -56,14 +56,14 @@
   "MAESTRO-FERMATA.description": "[gold]Retain[/gold] your hand.",
   "MAESTRO-FERMATA.title": "Fermata",
 
-  "MAESTRO-THIRD_MOVEMENT.description": "Deal {Damage} damage. If this is the third card played this turn, this costs 1 less.",
-  "MAESTRO-THIRD_MOVEMENT.title": "Third Movement",
-
   "MAESTRO-SECTIONAL.description": "Add {Amount} of the same [gold]Performer[/gold] to your hand.",
   "MAESTRO-SECTIONAL.title": "Sectional",
 
   "MAESTRO-JAM_SESSION.description": "At the start of every turn, add 1 Performer to your hand.",
   "MAESTRO-JAM_SESSION.title": "Jam Session",
+
+  "MAESTRO-THIRD_MOVEMENT.description": "Deal {Damage} damage. If this is the third card played this turn, this costs 1 less.",
+  "MAESTRO-THIRD_MOVEMENT.title": "Third Movement",
   
   
   
