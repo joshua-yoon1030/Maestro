@@ -22,7 +22,7 @@ public class Sectional(): MaestroCard(2, CardType.Skill, CardRarity.Uncommon, Ta
 
         for (int i = 0; i < DynamicVars["Amount"].IntValue; i++)
         {
-            await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, true);
+            await CardPileCmd.AddGeneratedCardToCombat(card.CreateClone(), PileType.Hand, true);
         }
     }
     
