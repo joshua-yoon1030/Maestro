@@ -12,7 +12,7 @@ namespace Maestro.MaestroCode.Cards.Uncommon;
 
 public class Sectional(): MaestroCard(2, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DynamicVar("Amount", 3).WithTooltip("Performer")];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DynamicVar("Amount", 3).WithTooltip("PERFORMER")];
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

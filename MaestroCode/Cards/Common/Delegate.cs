@@ -16,7 +16,7 @@ namespace Maestro.MaestroCode.Cards.Common;
 [Pool(typeof(MaestroCardPool))]
 public class Delegate() : MaestroCard(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
 {
-	protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(3, ValueProp.Move).WithTooltip("Performer")];
+	protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(3, ValueProp.Move).WithTooltip("PERFORMER")];
 
 	protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
 	{

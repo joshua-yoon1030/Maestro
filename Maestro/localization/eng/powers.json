@@ -5,5 +5,17 @@
 
   "MAESTRO-PAGE_FLIP_POWER.description": "At the start of your next turn, draw 1 card.",
   "MAESTRO-PAGE_FLIP_POWER.smartDescription": "At the start of your next turn, draw [blue]{Amount}[/blue] {PageFlipPower:plural:card|cards}.",
-  "MAESTRO-PAGE_FLIP_POWER.title": "Page Flip"
+  "MAESTRO-PAGE_FLIP_POWER.title": "Page Flip",
+
+  "MAESTRO-JAM_SESSION_POWER.description": "At the start of every turn, add 1 Performer to your hand.",
+  "MAESTRO-JAM_SESSION_POWER.smartDescription": "At the start of every turn, add [blue]{Amount}[/blue] [gold]Performer[/gold] to your hand.",
+  "MAESTRO-JAM_SESSION_POWER.title": "Jam Session",
+
+  "MAESTRO-ACCELERANDO_POWER.description": "At the start of your turn, draw 1 card.",
+  "MAESTRO-ACCELERANDO_POWER.smartDescription": "At the start of your turn, draw [blue]{Amount}[/blue] {AccelerandoPower:plural:card|cards}.",
+  "MAESTRO-ACCELERANDO_POWER.title": "Accelerando",
+
+  "MAESTRO-SECTION_LEADER_POWER.description": "Whenever you add a performer to your hand, upgrade it.",
+  "MAESTRO-SECTION_LEADER_POWER.smartDescription": "Whenever you add a [gold]Performer[/gold] to your hand, upgrade it.",
+  "MAESTRO-SECTION_LEADER_POWER.title": "Section Leader"
 }

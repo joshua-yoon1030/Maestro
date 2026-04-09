@@ -59,7 +59,7 @@
   "MAESTRO-SECTIONAL.description": "Add {Amount} of the same [gold]Performer[/gold] to your hand.",
   "MAESTRO-SECTIONAL.title": "Sectional",
 
-  "MAESTRO-JAM_SESSION.description": "At the start of every turn, add 1 Performer to your hand.",
+  "MAESTRO-JAM_SESSION.description": "At the start of every turn, add 1 [gold]Performer[/gold] to your hand.",
   "MAESTRO-JAM_SESSION.title": "Jam Session",
 
   "MAESTRO-THIRD_MOVEMENT.description": "Deal {Damage} damage. If this is the third card played this turn, this costs 1 less.",
@@ -72,6 +72,25 @@
   "MAESTRO-PRACTICE_MAKES_PERFECT.selectionScreenPrompt": "Choose a card to play.",
   "MAESTRO-PRACTICE_MAKES_PERFECT.description": "Choose a card in your hand. Play it X{IfUpgraded:show:+1} times.",
   "MAESTRO-PRACTICE_MAKES_PERFECT.title": "Practice Makes Perfect",
+
+  "MAESTRO-ACCELERANDO.description": "Lose {DexterityPower} [gold]Dexterity[/gold]. At the start of your turn, draw {AccelerandoPower:diff()} additional card.",
+  "MAESTRO-ACCELERANDO.title": "Accelerando",
+
+  "MAESTRO-FORTISSIMO.description": "Apply {VulnerablePower} [gold]Vulnerable[/gold] on all enemies. Apply {VulnerablePower} [gold]Vulnerable[/gold] on yourself.",
+  "MAESTRO-FORTISSIMO.title": "Fortissimo",
+  
+  "MAESTRO-SECTION_LEADER.description": "Whenever you add a [gold]Performer[/gold] to your hand, upgrade it.",
+  "MAESTRO-SECTION_LEADER.title": "Section Leader",
+
+  "MAESTRO-CUTOFF.description": "Lose all your [gold]Resonance[/gold]. Deal {IfUpgraded: 3:2}x the amount lost to an enemy.",
+  "MAESTRO-CUTOFF.title": "Cutoff",
+
+  "MAESTRO-OCTAVE.description": "Gain {Resonance} [gold]Resonance[/gold]. Can only be played if this is the 8th card played this turn.",
+  "MAESTRO-OCTAVE.title": "Octave",
+
+  "MAESTRO-PIANISSIMO.description": "Gain {IntangiblePower} [gold]Intangible[/gold]. You can't get [gold]Block[/gold] from cards for {Turns} turns.",
+  "MAESTRO-PIANISSIMO.title": "Pianissimo",
+  
   
   
   
@@ -85,7 +104,7 @@
   "MAESTRO-PERFORMER3.description": "Gain {Resonance:diff()} [gold]Resonance[/gold]",
   "MAESTRO-PERFORMER3.title": "Trumpeter",
 
-  "MAESTRO-PERFORMER4.description": "Apply {WeakPower: diff} [gold]Weak[/gold]",
+  "MAESTRO-PERFORMER4.description": "Apply {WeakPower: diff()} [gold]Weak[/gold]",
   "MAESTRO-PERFORMER4.title": "Flautist",
 
   "MAESTRO-PERFORMER5.description": "Deal {Damage:diff()} damage.",
